@@ -24,7 +24,7 @@ final class ServiceProvider extends BaseServiceProvider
             return;
         }
         $config = $this->app->make(Config::class)->get('seed', []);
-        $path = \is_array($config) ? (string) ($config['path'] ?? 'seed') : 'seed';
+        $path = \is_array($config) ? (string) ($config['path'] ?? 'database/seed') : 'database/seed';
         $this->app->singleton(Seeder::class, static function (Container $container) use ($path): Seeder {
             $databases = $container->make(DatabaseManagerInterface::class);
             if (!$databases instanceof DatabaseManagerInterface) {

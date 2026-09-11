@@ -8,9 +8,9 @@ Install it for development:
 composer require --dev puff/seed
 ```
 
-The package publishes `config/seed.php` with a default `seed/` directory.
+The package publishes `config/seed.php` with a default `database/seed/` directory.
 
-Create `seed/Users.php`:
+Create `database/seed/Users.php`:
 
 ```bash
 ./puff seed create Users
